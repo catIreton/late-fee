@@ -1092,7 +1092,7 @@ export class GameScene extends Phaser.Scene {
     this.genreObjs.push(miss);
 
     this.genreObjs.forEach(o => {
-      (o as Phaser.GameObjects.Components.Alpha).setAlpha(0);
+      (o as unknown as Phaser.GameObjects.Components.Alpha).setAlpha(0);
       this.tweens.add({ targets: o, alpha: 1, duration: 160 });
     });
   }
@@ -1236,7 +1236,7 @@ export class GameScene extends Phaser.Scene {
       () => this.onMiss()));
 
     this.panelObjs.forEach(o => {
-      (o as Phaser.GameObjects.Components.Alpha).setAlpha(0);
+      (o as unknown as Phaser.GameObjects.Components.Alpha).setAlpha(0);
       this.tweens.add({ targets: o, alpha: 1, duration: 160 });
     });
   }
@@ -1283,7 +1283,7 @@ export class GameScene extends Phaser.Scene {
     this.lateFeeObjs.push(collectBtn, waiveBtn);
 
     this.lateFeeObjs.forEach(o => {
-      (o as Phaser.GameObjects.Components.Alpha).setAlpha(0);
+      (o as unknown as Phaser.GameObjects.Components.Alpha).setAlpha(0);
       this.tweens.add({ targets: o, alpha: 1, duration: 160 });
     });
   }

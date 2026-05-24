@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { pickMovie, getInitialCheckedOut, availableCount } from '../utils/inventory';
 import { MOVIES } from '../data/movies';
-import type { Movie } from '../types';
 
 // Deterministic RNG helpers
 const always0  = () => 0;      // always picks first element / always < 0.5 (genre branch)
